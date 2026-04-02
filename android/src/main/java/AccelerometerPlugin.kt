@@ -54,7 +54,7 @@ class AccelerometerPlugin(private val activity: android.app.Activity) : Plugin(a
 
                         Log.d(TAG, "onSensorChanged → x=%.3f, y=%.3f, z=%.3f".format(x, y, z))
 
-                        trigger("accelerometer:update", data)
+                        trigger("accelerometer_update", data)
                     }
                 }
 
