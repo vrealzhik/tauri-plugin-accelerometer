@@ -19,25 +19,12 @@ Default permissions for the plugin
 <tr>
 <td>
 
-`accelerometer:allow-ping`
+`accelerometer:allow-register-listener`
 
 </td>
 <td>
 
-Enables the ping command without any pre-configured scope.
-
-</td>
-</tr>
-
-<tr>
-<td>
-
-`accelerometer:deny-ping`
-
-</td>
-<td>
-
-Denies the ping command without any pre-configured scope.
+Enables the register_listener command without any pre-configured scope.
 
 </td>
 </tr>
@@ -45,25 +32,12 @@ Denies the ping command without any pre-configured scope.
 <tr>
 <td>
 
-`accelerometer:allow-start-listen`
+`accelerometer:deny-register-listener`
 
 </td>
 <td>
 
-Enables the start_listen command without any pre-configured scope.
-
-</td>
-</tr>
-
-<tr>
-<td>
-
-`accelerometer:deny-start-listen`
-
-</td>
-<td>
-
-Denies the start_listen command without any pre-configured scope.
+Denies the register_listener command without any pre-configured scope.
 
 </td>
 </tr>
