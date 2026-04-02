@@ -14,12 +14,11 @@ pub fn init<R: Runtime, C: DeserializeOwned>(
 pub struct Accelerometer<R: Runtime>(AppHandle<R>);
 
 impl<R: Runtime> Accelerometer<R> {
-
-    pub fn start_listening(&self) -> crate::Result<AccelerometerResult> {
-        Ok(AccelerometerResult::default())
+    pub fn start_listening(&self) -> crate::Result<()> {
+        Ok(())
     }
 
-    pub fn stop_listening(&self) -> crate::Result<AccelerometerResult> {
-        Ok(AccelerometerResult::default())
+    pub fn stop_listening(&self) -> crate::Result<()> {
+        Ok(())
     }
 }

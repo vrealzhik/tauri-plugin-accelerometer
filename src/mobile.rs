@@ -26,13 +26,13 @@ pub struct Accelerometer<R: Runtime>(PluginHandle<R>);
 
 impl<R: Runtime> Accelerometer<R> {
 
-    pub fn start_listening(&self) -> crate::Result<AccelerometerResult> {
+    pub fn start_listening(&self) -> crate::Result<()> {
         self.0
             .run_mobile_plugin("startListening", ())
             .map_err(Into::into)
     }
 
-    pub fn stop_listening(&self) -> crate::Result<AccelerometerResult> {
+    pub fn stop_listening(&self) -> crate::Result<()> {
         self.0
             .run_mobile_plugin("stopListening", ())
             .map_err(Into::into)

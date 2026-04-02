@@ -5,11 +5,11 @@ use crate::AccelerometerExt;
 use crate::Result;
 
 #[command]
-pub(crate) async fn start_listening<R: Runtime>(app: AppHandle<R>) -> Result<AccelerometerResult> {
+pub(crate) async fn start_listening<R: Runtime>(app: AppHandle<R>) -> Result<()> {
     app.accelerometer().start_listening()
 }
 
 #[command]
-pub(crate) async fn stop_listening<R: Runtime>(app: AppHandle<R>) -> Result<AccelerometerResult> {
+pub(crate) async fn stop_listening<R: Runtime>(app: AppHandle<R>) -> Result<()> {
     app.accelerometer().stop_listening()
 }
