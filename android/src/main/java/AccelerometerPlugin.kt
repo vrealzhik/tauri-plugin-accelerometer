@@ -19,7 +19,7 @@ class AccelerometerPlugin(private val activity: android.app.Activity) : Plugin(a
     private var listener: SensorEventListener? = null
 
     @Command
-    fun startListener(invoke: Invoke) {
+    fun startListening(invoke: Invoke) {
         if (sensorManager == null) {
             sensorManager = activity.getSystemService(android.content.Context.SENSOR_SERVICE) as SensorManager
             accelerometer = sensorManager?.getDefaultSensor(Sensor.TYPE_ACCELEROMETER)
@@ -44,7 +44,7 @@ class AccelerometerPlugin(private val activity: android.app.Activity) : Plugin(a
     }
 
     @Command
-    fun stopListener(invoke: Invoke) {
+    fun stopListening(invoke: Invoke) {
         listener?.let { sensorManager?.unregisterListener(it) }
         invoke.resolve()
     }

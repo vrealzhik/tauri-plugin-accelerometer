@@ -6,7 +6,7 @@ import CoreMotion
 class AccelerometerPlugin: Plugin {
     private let motionManager = CMMotionManager()
 
-    @objc func startListener(_ invoke: Invoke) {
+    @objc func startListening(_ invoke: Invoke) {
         guard motionManager.isAccelerometerAvailable else {
             invoke.reject("Accelerometer not available")
             return
@@ -27,7 +27,7 @@ class AccelerometerPlugin: Plugin {
         invoke.resolve()
     }
 
-    @objc func stopListener(_ invoke: Invoke) {
+    @objc func stopListening(_ invoke: Invoke) {
         motionManager.stopAccelerometerUpdates()
         invoke.resolve()
     }
