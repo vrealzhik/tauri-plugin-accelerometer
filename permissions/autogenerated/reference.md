@@ -6,6 +6,8 @@ Default permissions for the plugin
 
 - `allow-start-listening`
 - `allow-stop-listening`
+- `allow-register-listener`
+- `allow-unregister-listener`
 
 ## Permission Table
 

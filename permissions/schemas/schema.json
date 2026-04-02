@@ -343,10 +343,10 @@
           "markdownDescription": "Denies the unregister_listener command without any pre-configured scope."
         },
         {
-          "description": "Default permissions for the plugin\n#### This default permission set includes:\n\n- `allow-start-listening`\n- `allow-stop-listening`",
+          "description": "Default permissions for the plugin\n#### This default permission set includes:\n\n- `allow-start-listening`\n- `allow-stop-listening`\n- `allow-register-listener`\n- `allow-unregister-listener`",
           "type": "string",
           "const": "default",
-          "markdownDescription": "Default permissions for the plugin\n#### This default permission set includes:\n\n- `allow-start-listening`\n- `allow-stop-listening`"
+          "markdownDescription": "Default permissions for the plugin\n#### This default permission set includes:\n\n- `allow-start-listening`\n- `allow-stop-listening`\n- `allow-register-listener`\n- `allow-unregister-listener`"
         }
       ]
     }
