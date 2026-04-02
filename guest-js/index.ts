@@ -1,9 +1,5 @@
-import { invoke } from '@tauri-apps/api/core'
+import { invoke, addPluginListener } from "@tauri-apps/api/core";
 
-export async function ping(value: string): Promise<string | null> {
-  return await invoke<{value?: string}>('plugin:accelerometer|ping', {
-    payload: {
-      value,
-    },
-  }).then((r) => (r.value ? r.value : null));
+export async function onUpdate(handler: (event: any) => void) {
+  return await addPluginListener("accelerometer", "update", handler);
 }
