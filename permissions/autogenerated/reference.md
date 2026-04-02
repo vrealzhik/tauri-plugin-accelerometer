@@ -93,4 +93,30 @@ Denies the stop_listening command without any pre-configured scope.
 
 </td>
 </tr>
+
+<tr>
+<td>
+
+`accelerometer:allow-unregister-listener`
+
+</td>
+<td>
+
+Enables the unregister_listener command without any pre-configured scope.
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+`accelerometer:deny-unregister-listener`
+
+</td>
+<td>
+
+Denies the unregister_listener command without any pre-configured scope.
+
+</td>
+</tr>
 </table>
