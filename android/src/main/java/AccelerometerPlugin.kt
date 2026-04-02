@@ -43,9 +43,13 @@ class AccelerometerPlugin(private val activity: android.app.Activity) : Plugin(a
                 override fun onSensorChanged(event: SensorEvent?) {
                     event?.let {
                         val data = JSObject()
-                        data.put("x", it.values[0])
-                        data.put("y", it.values[1])
-                        data.put("z", it.values[2])
+                        val x = it.values[0]
+                        val y = it.values[1]
+                        val z = it.values[2]
+
+                        data.put("x", x)
+                        data.put("y", y)
+                        data.put("z", z)
                         data.put("timestamp", System.currentTimeMillis())
 
                         Log.d(TAG, "onSensorChanged → x=%.3f, y=%.3f, z=%.3f".format(x, y, z))
